@@ -22,7 +22,12 @@ return {
     ["<Tab>"] = { ":bn<CR>", desc = "Next Buffer"},
     ["<S-Tab>"] = { ":bp<CR>", desc = "Previous Buffer"},
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+  },
+  i = {
+    -- quick save
+    ["<C-s>"] = { "<esc>:w!<cr>a", desc = "Save File" },  -- change description but the same command
+
   },
   t = {
     -- setting a mapping to false will disable it

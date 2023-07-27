@@ -9,4 +9,12 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "cappyzawa/trim.nvim",
+    opts = {}
+  },
+  {
+    'ThePrimeagen/vim-be-good',
+    cmd = "VimBeGood"
+  }
 }
