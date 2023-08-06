@@ -14,6 +14,9 @@ return {
     opts = {}
   },
   {
+    "direnv/direnv.vim",
+  },
+  {
     'ThePrimeagen/vim-be-good',
     cmd = "VimBeGood"
   }
