@@ -19,6 +19,7 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["ç"] = {":"},
+    ["Ç"] = {":"},
     ["<Tab>"] = { ":bn<CR>", desc = "Next Buffer"},
     ["<S-Tab>"] = { ":bp<CR>", desc = "Previous Buffer"},
     -- quick save
@@ -26,8 +27,12 @@ return {
   },
   i = {
     -- quick save
-    ["<C-s>"] = { "<esc>:w!<cr>a", desc = "Save File" },  -- change description but the same command
-
+    --["<C-s>"] = { "<esc>:w!<cr>a", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { "<c-o>:w!<cr>", desc = "Save File" },  -- change description but the same command
+  },
+  v = {
+    ["Ç"] = {":"},
+    ["ç"] = {":"},
   },
   t = {
     -- setting a mapping to false will disable it
