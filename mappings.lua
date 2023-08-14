@@ -24,11 +24,14 @@ return {
     ["<S-Tab>"] = { ":bp<CR>", desc = "Previous Buffer"},
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<c-w>,"] = {"<c-w>t<c-w>H", desc = "Change Split to Vertical"},
+    ["<c-w>."] = {"<c-w>t<c-w>K", desc = "Change Split to Horizontal"},
   },
   i = {
     -- quick save
     --["<C-s>"] = { "<esc>:w!<cr>a", desc = "Save File" },  -- change description but the same command
     ["<C-s>"] = { "<c-o>:w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-o>"] = { "<C-\\><C-o>"}
   },
   v = {
     ["Ç"] = {":"},
