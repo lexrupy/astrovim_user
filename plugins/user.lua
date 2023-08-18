@@ -10,6 +10,10 @@ return {
   --   end,
   -- },
   {
+    "tpope/vim-fugitive",
+    lazy = false
+  },
+  {
     "cappyzawa/trim.nvim",
     opts = {}
   },

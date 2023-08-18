@@ -66,6 +66,35 @@ return {
   },
 
 
+  -- This function is run last and is a good place to configuring
+  -- augroups/autocommands and custom filetypes also this just pure lua so
+  -- anything that doesn't fit in the normal config locations above can go here
+  polish = function()
+    -- When leaving insert mode, turn off CapsLock as if its turned on in insert mode
+    -- to prevent annoying behavior with vim/nvim comands
+    vim.api.nvim_create_autocmd("InsertLeave", {
+      callback = function()
+        local _, _, caps_state = vim.fn.system("xset -q"):find("00: Caps Lock:%s+(%a+)")
+        if caps_state == "on" then
+            vim.fn.system("xdotool key Caps_Lock")
+        end
+      end,
+    })
+    -- Set up custom filetypes
+    -- vim.filetype.add {
+    --   extension = {
+    --     foo = "fooscript",
+    --   },
+    --   filename = {
+    --     ["Foofile"] = "fooscript",
+    --   },
+    --   pattern = {
+    --     ["~/%.config/foo/.*"] = "fooscript",
+    --   },
+    -- }
+  end,
+  
+
   --------------------------------------------------------------------------------------------
   -- NVCHAD BAR REPLICA
   --------------------------------------------------------------------------------------------
@@ -116,31 +145,4 @@ return {
 
 
 
-  -- This function is run last and is a good place to configuring
-  -- augroups/autocommands and custom filetypes also this just pure lua so
-  -- anything that doesn't fit in the normal config locations above can go here
-  polish = function()
-    -- When leaving insert mode, turn off CapsLock as if its turned on in insert mode
-    -- to prevent annoying behavior with vim/nvim comands
-    vim.api.nvim_create_autocmd("InsertLeave", {
-      callback = function()
-        local _, _, caps_state = vim.fn.system("xset -q"):find("00: Caps Lock:%s+(%a+)")
-        if caps_state == "on" then
-            vim.fn.system("xdotool key Caps_Lock")
-        end
-      end,
-    })
-    -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
-    --   filename = {
-    --     ["Foofile"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     ["~/%.config/foo/.*"] = "fooscript",
-    --   },
-    -- }
-  end,
 }
