@@ -18,12 +18,13 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  -- colorscheme = "astrodark",
   -- colorscheme = "catppuccin",
-
-  -- colorscheme = "doom-one",
+  -- colorscheme = "dracula",
+  colorscheme = "doom-one",
   -- colorscheme = "onedark",
   -- colorscheme = "rose-pine-moon",
+  -- colorscheme = "palenight",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -57,7 +58,7 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "pyright"
     },
   },
 
@@ -71,7 +72,6 @@ return {
       },
     },
   },
-
 
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so

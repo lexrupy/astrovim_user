@@ -36,4 +36,15 @@ return {
     event = "VeryLazy",
     opts = {},
   },
+  {
+    -- "lexrupy/doom-one.nvim",
+    dir = "~/projects/doom-one",
+    dev = true
+  },
+  -- {
+  --   "rose-pine/neovim",
+  --   lazy=false,
+  --   name = "rose-pine",
+  --   opts = {},
+  -- }
 }

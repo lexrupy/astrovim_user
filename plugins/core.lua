@@ -63,15 +63,29 @@ return {
   --   end,
   -- },
   -- By adding to the which-key config and using our helper function you can add more which-key registered bindings
-  -- {
-  --   "folke/which-key.nvim",
-  --   config = function(plugin, opts)
-  --     require "plugins.configs.which-key"(plugin, opts) -- include the default astronvim config that calls the setup call
-  --     -- Add bindings which show up as group name
-  --     local wk = require "which-key"
-  --     wk.register({
-  --       b = { name = "Buffer" },
-  --     }, { mode = "n", prefix = "<leader>" })
-  --   end,
-  -- },
+  {
+    "folke/which-key.nvim",
+    opts = {
+      key_labels = {
+        -- override the label used to display some keys. It doesn't effect WK in any other way.
+        -- For example:
+        -- ["<space>"] = "SPC",
+        -- ["<cr>"] = "RET",
+        -- ["<tab>"] = "TAB",
+      },
+      icons = {
+        breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
+        separator = "", -- symbol used between a key and it's label
+        group = "+", -- symbol prepended to a group
+      },
+    }
+    -- config = function(plugin, opts)
+    --   require "plugins.configs.which-key"(plugin, opts) -- include the default astronvim config that calls the setup call
+    --   -- Add bindings which show up as group name
+    --   local wk = require "which-key"
+    --   wk.register({
+    --     b = { name = "Buffer" },
+    --   }, { mode = "n", prefix = "<leader>" })
+    -- end,
+  },
 }
