@@ -37,9 +37,7 @@ return {
     opts = {},
   },
   {
-    -- "lexrupy/doom-one.nvim",
-    dir = "~/projects/doom-one",
-    dev = true
+    "lexrupy/doom-one.nvim",
   },
   -- {
   --   "rose-pine/neovim",
