@@ -18,14 +18,16 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    ["ç"] = {":"},
-    ["Ç"] = {":"},
+    ["ç"] = {":", desc = "Enter Command Mode"},
+    ["Ç"] = {":", desc = "Enter Command Mode"},
     ["<Tab>"] = { ":bn<CR>", desc = "Next Buffer"},
     ["<S-Tab>"] = { ":bp<CR>", desc = "Previous Buffer"},
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<c-w>,"] = {"<c-w>t<c-w>H", desc = "Change Split to Vertical"},
     ["<c-w>."] = {"<c-w>t<c-w>K", desc = "Change Split to Horizontal"},
+    ["<c-u>"] = {"<c-u>zz", desc = "Move Half Page UP"},
+    ["<c-d>"] = {"<c-d>zz", desc = "Move Half Page DOWN"},
   },
   i = {
     -- quick save
@@ -34,8 +36,9 @@ return {
     ["<C-o>"] = { "<C-\\><C-o>"}
   },
   v = {
-    ["Ç"] = {":"},
-    ["ç"] = {":"},
+    ["Ç"] = {":", desc = "Enter Command Mode"},
+
+    ["ç"] = {":", desc = "Enter Command Mode"},
   },
   t = {
     -- setting a mapping to false will disable it

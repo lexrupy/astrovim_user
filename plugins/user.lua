@@ -75,6 +75,8 @@ return {
   --   "rose-pine/neovim",
   --   lazy=false,
   --   name = "rose-pine",
-  --   opts = {},
+  --   opts = {
+  --     disable_italics = true,
+  --   },
   -- }
 }
