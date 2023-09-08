@@ -11,10 +11,11 @@ return {
     "tpope/vim-fugitive",
     lazy = false
   },
-  {
-    "cappyzawa/trim.nvim",
-    opts = {}
-  },
+  -- {
+  --   "cappyzawa/trim.nvim",
+  --   opts = {},
+  --   lazy = false
+  -- },
   {
     'ThePrimeagen/vim-be-good',
     cmd = "VimBeGood"
