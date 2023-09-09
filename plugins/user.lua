@@ -3,22 +3,42 @@ return {
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
-    config = function()
-      require("lsp_signature").setup()
-    end,
+    config = function() require("lsp_signature").setup() end,
   },
   {
     "tpope/vim-fugitive",
-    lazy = false
+    lazy = false,
+  },
+  {
+    "tpope/vim-repeat",
+    event = "VeryLazy",
   },
   -- {
   --   "cappyzawa/trim.nvim",
   --   opts = {},
   --   lazy = false
   -- },
+  -- {
+  --   "ggandor/leap.nvim",
+  --   enabled = true,
+  --   keys = {
+  --     { "s", mode = { "n", "x", "o" }, desc = "Leap forward to" },
+  --     { "S", mode = { "n", "x", "o" }, desc = "Leap backward to" },
+  --     { "gs", mode = { "n", "x", "o" }, desc = "Leap from windows" },
+  --   },
+  --   config = function(_, opts)
+  --     local leap = require("leap")
+  --     for k, v in pairs(opts) do
+  --       leap.opts[k] = v
+  --     end
+  --     leap.add_default_mappings(true)
+  --     vim.keymap.del({ "x", "o" }, "x")
+  --     vim.keymap.del({ "x", "o" }, "X")
+  --   end,
+  -- },
   {
-    'ThePrimeagen/vim-be-good',
-    cmd = "VimBeGood"
+    "ThePrimeagen/vim-be-good",
+    cmd = "VimBeGood",
   },
   {
     "Wansmer/treesj",
@@ -30,7 +50,7 @@ return {
       },
     },
     cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
-    opts = { use_default_keymaps = false }
+    opts = { use_default_keymaps = false },
   },
   {
     "kevinhwang91/nvim-bqf",
@@ -71,7 +91,7 @@ return {
   --       },
   --     }
   --   }
-  -- }
+  -- },
   -- {
   --   "rose-pine/neovim",
   --   lazy=false,
@@ -79,5 +99,5 @@ return {
   --   opts = {
   --     disable_italics = true,
   --   },
-  -- }
+  -- },
 }

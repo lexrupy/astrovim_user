@@ -40,6 +40,9 @@ return {
 
     ["ç"] = {":", desc = "Enter Command Mode"},
   },
+  c = {
+    ["Q"] = {"q!", desc = "Force Quit without save"}
+  },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
