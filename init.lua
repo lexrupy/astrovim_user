@@ -83,9 +83,18 @@ return {
       callback = function()
         local uname = vim.loop.os_uname()
         if (uname.sysname:find 'Windows' and true or false) then
+          -- using python script on a batch file (included)
           local dirname, _ = vim.env.MYVIMRC:match('^(.*\\)([^\\]-)$')
           local turn_caps_off_cmd = dirname .. "lua\\user\\win32\\turn_caps_off.bat"
           vim.fn.system(turn_caps_off_cmd)
+          -- using capslock.exe tool
+          -- This solution depends on an utility called capslock.exe, that can be downloaded from here:
+          -- https://www.rjlsoftware.com/software/utility/capslock/
+          -- vim.fn.system("capslock.exe off")
+        elseif (uname.release:lower():find "microsoft") then
+          -- This solution depends on an utility called capslock.exe, that can be downloaded from here:
+          -- https://www.rjlsoftware.com/software/utility/capslock/
+          vim.fn.system("capslock.exe off")
         else
           local _, _, caps_state = vim.fn.system("xset -q"):find("00: Caps Lock:%s+(%a+)")
           if caps_state == "on" then
