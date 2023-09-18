@@ -9,7 +9,7 @@ return {
     wrap = false,          -- sets vim.opt.wrap
     -- showtabline = 0, -- sets vim.opt.showtabline
     scrolloff = 2,         -- sets vim.opt.scrolloff
-    cmdheight = 1
+    -- cmdheight = 1
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
