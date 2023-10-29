@@ -107,6 +107,18 @@ return {
       pattern = { "*.py", "*.lua" },
       command = [[%s/\s\+$//e]],
     })
+
+
+    -- Create text objects to select inside and arround _
+
+    -- local chars = { '_' } --, ':', ',', ';', '|', '/', '\\', '*', '+', '%', '`', '?' }
+    -- for _, char in ipairs(chars) do
+    --     for _, mode in ipairs({ 'x', 'o' }) do
+    --         vim.api.nvim_set_keymap(mode, "i" .. char, string.format(':<C-u>silent! normal! f%sF%slvt%s<CR>', char, char, char), { noremap = true, silent = true })
+    --         vim.api.nvim_set_keymap(mode, "a" .. char, string.format(':<c-u>silent! normal! f%sf%svf%s<cr>', char, char, char), { noremap = true, silent = true })
+    --     end
+    -- end
+    --
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {

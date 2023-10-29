@@ -22,8 +22,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     ["ç"] = {":", desc = "Enter Command Mode"},
     ["Ç"] = {":", desc = "Enter Command Mode"},
-    ["<Tab>"] = { ":bn<CR>", desc = "Next Buffer"},
-    ["<S-Tab>"] = { ":bp<CR>", desc = "Previous Buffer"},
+    ["<Tab>"] = { "<cmd>bn<CR>", desc = "Next Buffer"},
+    ["<S-Tab>"] = { "<cmd>bp<CR>", desc = "Previous Buffer"},
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<c-w>,"] = {"<c-w>t<c-w>H", desc = "Change Split to Vertical"},
