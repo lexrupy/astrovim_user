@@ -105,10 +105,23 @@ return {
   --     }
   --   }
   -- },
+  {
+    "rose-pine/neovim",
+    lazy=false,
+    name = "rose-pine",
+    opts = {
+      disable_italics = true,
+    },
+  },
+  {
+    "navarasu/onedark.nvim",
+    lazy=false,
+
+  }
   -- {
-  --   "rose-pine/neovim",
+  --   "drewtempelmeyer/palenight.vim",
   --   lazy=false,
-  --   name = "rose-pine",
+  --   name = "palenight",
   --   opts = {
   --     disable_italics = true,
   --   },

@@ -7,6 +7,7 @@ return {
       "python",
       "javascript",
       "html",
+      "css"
     })
   end,
 }
