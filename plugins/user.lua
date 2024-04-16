@@ -39,6 +39,23 @@ return {
       vim.keymap.del({ "x", "o" }, "X")
     end,
   },
+  -- {
+  --   "smoka7/hop.nvim",
+  --   opts = {
+  --     multi_windows = true,
+  --     keys = "htnsueoaidgcrlypmbkjvx",
+  --     uppercase_labels = false,
+  --   },
+  --   keys = {
+  --     {
+  --       "<leader>fj",
+  --       function()
+  --         require("hop").hint_words()
+  --       end,
+  --       mode = {"n", "x", "o"},
+  --     },
+  --   },
+  -- },
   {
     "folke/todo-comments.nvim",
     lazy=false,
@@ -105,6 +122,8 @@ return {
   --     }
   --   }
   -- },
+
+  -- Varios Temas
   {
     "rose-pine/neovim",
     lazy=false,
@@ -117,7 +136,23 @@ return {
     "navarasu/onedark.nvim",
     lazy=false,
 
-  }
+  },
+  { "catppuccin/nvim",
+    name = "catppuccin",
+    lazy=false,
+    -- priority = 1000
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    -- priority = 1000,
+    opts = {},
+  },
+  -- {
+  --     "Mofiqul/dracula.nvim",
+  --     lazy = false,
+  --     opts = {},
+  -- }
   -- {
   --   "drewtempelmeyer/palenight.vim",
   --   lazy=false,
@@ -126,4 +161,5 @@ return {
   --     disable_italics = true,
   --   },
   -- },
+
 }
